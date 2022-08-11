@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --paragraph: hsl(215, 51%, 70%);
+    --highlight-cyan: hsl(178, 100%, 50%);
+    --main-BG: hsl(217, 54%, 11%);
+    --card-BG: hsl(216, 50%, 16%);
+    --hr-line: hsl(215, 32%, 27%);
+    --main-white: hsl(0, 0%, 100%);
+    font-family: 'Outfit', sans-serif;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    text-decoration: none;
+    font: inherit;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--main-BG);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    max-width: 23rem;
+}
+
+.card {
+    background-color: var(--card-BG);
+    max-width: 21.4rem;
+    padding: 1.3rem 1.5rem;
+    border-radius: 1rem;
+    position: relative;
+    height: auto;
+}
+
+.img-container {
+    max-width: 100%;
+    border-radius: 1rem;
+    cursor: pointer;
+    height: 300px;
+    position: relative;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--highlight-cyan);
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+    border-radius: 1rem;
+}
+
+.img-overlay img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.img-container:hover .img-overlay {
+    opacity: .6;
+}
+
+
+h1 {
+    color: var(--main-white);
+    font-weight: 600;
+    margin: 1.5rem 0 1rem 0;
+    font-size: 22px;
+}
+
+a {
+    color: var(--main-white);
+}
+
+a:hover, a:active {
+    color: var(--highlight-cyan);
+}
+
+p {
+    color: var(--paragraph);
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.ethereum, .clock, .details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.details {
+    margin-top: 1.3rem;
+}
+
+.details img {
+    margin-right: .5rem;
+}
+
+.details p {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.ETH {
+    color: var(--highlight-cyan);
+    font-weight: 400;
+}
+
+.hr {
+    display: flex;
+    background-color: var(--hr-line);
+    max-width: auto;
+    height: .085rem;
+    justify-content: center;
+    margin: 1rem 0 1rem 0;
+}
+
+.creator {
+    display: flex;
+    align-items: center;
+}
+
+.creator img {
+    width: 2rem;
+    border: .1rem white solid;
+    margin-right: 1rem;
+    border-radius: 50%;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--main-white);
+    margin-top: 2rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.attribution a:hover {
+    color: var(--highlight-cyan);
+}
