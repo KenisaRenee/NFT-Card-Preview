@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./images/Project Screenshot.PNG)
+![](https://i.imgur.com/No9qC9q.png)
 
 ### Links
 
